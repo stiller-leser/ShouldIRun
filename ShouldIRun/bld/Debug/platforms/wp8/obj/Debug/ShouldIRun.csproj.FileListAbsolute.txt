@@ -1,0 +1,14 @@
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\Bin\Debug\ApplicationIcon.png
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\Bin\Debug\Background.png
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\Bin\Debug\io.cordova.ShouldIRun.dll
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\Bin\Debug\io.cordova.ShouldIRun.pdb
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\Bin\Debug\AppManifest.xaml
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\obj\Debug\App.g.cs
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\obj\Debug\cordovalib\CordovaView.g.cs
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\obj\Debug\MainPage.g.cs
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\obj\Debug\io.cordova.ShouldIRun.g.resources
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\obj\Debug\io.cordova.ShouldIRun.dll
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\obj\Debug\io.cordova.ShouldIRun.pdb
+C:\Users\Cyrix\Documents\uni\ShouldIRun\ShouldIRun\bld\Debug\platforms\wp8\obj\Debug\XapCacheFile.xml

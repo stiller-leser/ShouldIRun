@@ -1,0 +1,141 @@
+html,body,div[data-role ="page"]{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    top: 4%;
+    bottom: 0;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    overflow-y: scroll;
+    overflow-x: word-break;
+}
+
+#debug {
+    position: absolute;
+    width: 100%;
+    height:100px;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 1000;
+    bottom: 0;
+}
+
+#start-overlay{
+    display: block;
+    margin-top: 5%;
+}
+
+#addStationContainerStart{
+    display: none;
+}
+
+.ui-input-text{
+    width: 93% !important;
+}
+
+li.ui-menu-item{
+    list-style: none;
+    height: 4%;
+    padding: 5%;
+    border: 1px solid white;
+    background-color: black;
+    width: 75%;
+    word-break: break-all;
+}
+
+span.ui-helper-hidden-accessible{
+   display: none;
+}
+
+hr#hrOverlay{
+    margin: 0;
+    width: 93%;
+}
+
+button.ui-btn{
+    width: 93%;
+}
+
+.app{
+    display: none;
+}
+
+div[data-role="header"], div[data-role="footer"]{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    height: 8%;
+    width: 100%;
+}
+
+div[data-role="header"]{
+    top: 0;
+}
+
+#changeStation{
+    width: 20%;
+    float: left;
+    top: 14%;
+}
+
+#changeStation.ui-btn-left{
+    position: relative;
+}
+
+#appName {
+    float: left;
+    width: 59%;
+    text-align: center;
+    padding-top: 5%;
+}
+
+#buttonNavigation{
+    width: 20%;
+    display: inline-block;
+}
+
+#settingsButton, #runBackToMenu, #settingsBack  {
+    width: 100%;
+}
+
+#runBackToMenu, #settingsBack{
+    display: none;
+}
+
+div[data-role="content"]{
+    padding: 0;
+    background-color: #F2F2F2;
+    height: 100%;
+}
+
+#settings, #run{
+    display: none;
+    margin-top: 5%;
+}
+
+li.connectionList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    list-style: none;
+    height: 4em;
+    width: 100%;
+    border-bottom: 3px #E6E6E6 solid;
+    overflow-x: word-break;
+}
+
+div[data-role="footer"]{
+    bottom: 0;
+    text-align: center;
+}
