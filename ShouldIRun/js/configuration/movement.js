@@ -17,18 +17,7 @@ function run(caller) {
         if (startLat != 0 && startLong != 0) {
             var time = 0;
 
-            if (!user.isMobile) {
-                var intervalTime = (Math.random() + 0.1) * 1000;
-                alert("not mobile");
-                var desktop = window.setInterval(function () {
-                    geoData.distanceRan += 1;
-                    $("#distanceRan").html(user.laplength - geoData.distanceRan);
-                    console.log(geoData.distanceRan);
-                }, intervalTime);
-            }
-
             movement.runInterval = window.setInterval(function () {
-                console.log(geoData.latitude + " : " + geoData.longitude);
 
                 if (geoData.distanceRan < user.laplength) {
                     var date = new Date();
@@ -41,9 +30,6 @@ function run(caller) {
                     time = (date.getTime() - startTime) / 1000;
                     $("#timeRan").html(time);
                 } else {
-                    if (!user.isMobile) {
-                        clearInterval(desktop);
-                    }
                     clearInterval(movement.runInterval);
                     user.laptime = time;
                     window.localStorage.setItem("laptime", time);
@@ -51,7 +37,6 @@ function run(caller) {
                     //If user started the app for the first time, show start overlay
                     if (!user.firstStart) {
                         $("#run").hide();
-                        $("#height").show();
                     }
                 }
 

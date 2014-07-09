@@ -13,7 +13,7 @@ var user = {
 function init() {
     console.log("init")
     getPosition();
-    user.isMobile = window.matchMedia("only screen and (device-max-width: 760px)").matches;
+    user.isMobile = true; //window.matchMedia("only screen and (device-max-width: 760px)").matches;
 
     //Does the app is started for the first time?
 	user.firstStart = window.localStorage.getItem("firstStart");

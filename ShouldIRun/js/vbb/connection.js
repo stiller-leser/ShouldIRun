@@ -16,8 +16,6 @@ function getCon(hafasNr){
 	//Request gets wrapped in this: DON'T TOUCH!
 	var reqC = '<?xml version="1.0" encoding="iso-8859-1"?><ReqC lang="DE" prod="testsytem" ver="1.1" accessId="' + accessId + '">' + request + '</ReqC>';
 
-	console.log(reqC);
-
 	$.ajax({
 		url: hafasUrl,
 		contentType: 'text/xml',
@@ -49,8 +47,6 @@ function getCon(hafasNr){
 				var direction = $(this).find("AttributeVariant[type='NORMAL']")[5].textContent;
 			}catch(err){
 				alert("Could not load notifications");
-				console.log(err);
-				console.log($(resC));
 			}
 
 			list += "<li class='connectionList' data-hours=" + hours +" data-minutes=" + minutes + " data-seconds=" + seconds + ">";
@@ -61,7 +57,6 @@ function getCon(hafasNr){
 		$("div[data-role='content']").append(list);
 	}).fail(function (error) {
 	    console.log("ERROR");
-		console.log(error);
 	});
 }
 
@@ -100,7 +95,7 @@ function calculateCon(){
 
 		if(overallDifference <= -61){
 		    $(this).hide();
-		} else if (overallDifference <= -60){
+		} else if (overallDifference <= 0){
 			$(this).css("background-color","black");
 		} else if (overallDifference <= 30){
 			$(this).css("background-color","purple")

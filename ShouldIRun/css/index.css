@@ -110,7 +110,7 @@ div[data-role="header"]{
 }
 
 div[data-role="content"]{
-    padding: 0;
+    padding: 3.5em 0 0 0;
     background-color: #F2F2F2;
     height: 100%;
 }
@@ -133,6 +133,10 @@ li.connectionList{
     width: 100%;
     border-bottom: 3px #E6E6E6 solid;
     overflow-x: word-break;
+}
+
+li.connectionList:last-of-type {
+    margin-bottom: 3.5em;
 }
 
 div[data-role="footer"]{
