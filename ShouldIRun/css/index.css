@@ -12,13 +12,22 @@ html,body,div[data-role ="page"]{
     bottom: 0;
     background-color: black;
     height: 100%;
-    width: 100%;
+    width: 90%;
     padding: 5%;
     overflow-y: scroll;
     overflow-x: word-break;
+    word-break: keep-all;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #debug {
+    display: none;
     position: absolute;
     width: 100%;
     height:100px;
@@ -60,7 +69,7 @@ hr#hrOverlay{
 }
 
 button.ui-btn{
-    width: 93%;
+    width: 100%;
 }
 
 .app{

@@ -12,13 +12,22 @@ html,body,div[data-role ="page"]{
     bottom: 0;
     background-color: black;
     height: 100%;
-    width: 100%;
+    width: 90%;
     padding: 5%;
     overflow-y: scroll;
     overflow-x: word-break;
+    word-break: keep-all;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #debug {
+    display: none;
     position: absolute;
     width: 100%;
     height:100px;
@@ -60,7 +69,7 @@ hr#hrOverlay{
 }
 
 button.ui-btn{
-    width: 93%;
+    width: 100%;
 }
 
 .app{
@@ -110,7 +119,7 @@ div[data-role="header"]{
 }
 
 div[data-role="content"]{
-    padding: 0;
+    padding: 3.5em 0 0 0;
     background-color: #F2F2F2;
     height: 100%;
 }
@@ -133,6 +142,10 @@ li.connectionList{
     width: 100%;
     border-bottom: 3px #E6E6E6 solid;
     overflow-x: word-break;
+}
+
+li.connectionList:last-of-type {
+    margin-bottom: 3.5em;
 }
 
 div[data-role="footer"]{

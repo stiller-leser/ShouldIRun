@@ -12,8 +12,8 @@ var geoData = {
 //Unfortunately first call first after 10 seconds
 function getPosition() {
     window.setInterval(function () {
-        navigator.geolocation.getCurrentPosition(success, error, { maximumAge: 1000, timeout: 1000, enableHighAccuracy: true });
-    }, 100);
+        navigator.geolocation.getCurrentPosition(success, error, { maximumAge: 1000, timeout: 10000, enableHighAccuracy: true });
+    }, 5000);
 }
 
 var success = function (position) {
@@ -39,6 +39,7 @@ function getDistance(lat1,lon1,lat2,lon2) {
     	var distanceM = Math.round(distanceKm * 1000);
         $("#distanceStation").html(distanceM);    
         user.distanceStation = distanceM;
+        calculateCon();
     }).fail(function(error){
     	console.log(error);
     })

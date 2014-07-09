@@ -1,4 +1,8 @@
-var addStation = function(newStation){
+stationData = {
+    loaded: false,
+};
+
+var addStation = function (newStation) {
 
 	var savedStations = JSON.parse(window.localStorage.getItem("savedStations"));
 
@@ -37,20 +41,11 @@ var displayStations = function(){
 }
 
 var loadStation = function(name){
-	var hafasNr = stationData[name][0];
-	var latitude = stationData[name][1];
-	var longitude = stationData[name][2];
-	
-	getCon(hafasNr);
-	calculateCon();
+	hafasNr = stations[name][0];
+	stationData.latitude = stations[name][1];
+	stationData.longitude = stations[name][2];
 
-	//First timeout needed because of framewoork gps duration
-	var gpsTimeout = window.setTimeout(function(){
-		var refreshDistance = window.setInterval(function(){
-			getDistance(geoData.latitude, geoData.longitude, latitude, longitude);
-			calculateCon();
-		}, user.updateTime);
-	},5000);
+	getCon(hafasNr);
 }
 
 
