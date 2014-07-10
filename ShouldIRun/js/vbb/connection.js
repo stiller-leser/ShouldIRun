@@ -91,9 +91,10 @@ function calculateCon() {
             //Take the laptime of the user into account
 
             var distance = user.distanceStation;
+            var height = user.floor;
 
             var timeOneMeter = user.laptime / user.laplength;
-            var timeForDistance = distance * timeOneMeter;
+            var timeForDistance = distance * timeOneMeter + user.floor * user.heightTime;
 
             //Remember kids, the differences are in seconds
 

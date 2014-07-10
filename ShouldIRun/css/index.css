@@ -110,11 +110,11 @@ div[data-role="header"]{
     display: inline-block;
 }
 
-#settingsButton, #runBackToMenu, #settingsBack  {
+#settingsButton, #runBackToMenu, #settingsBack, #heightBackToMenu  {
     width: 100%;
 }
 
-#runBackToMenu, #settingsBack{
+#runBackToMenu, #settingsBack, #stopDescend, #heightBackToMenu{
     display: none;
 }
 
@@ -124,7 +124,7 @@ div[data-role="content"]{
     height: 100%;
 }
 
-#settings, #run{
+#settings, #run, #height{
     display: none;
     margin-top: 5%;
 }

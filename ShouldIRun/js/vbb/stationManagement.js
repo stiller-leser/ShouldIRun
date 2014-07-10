@@ -31,6 +31,7 @@ var displayStations = function(){
             $(button).html(name);
             $(button).addClass("ui-btn ui-shadow ui-corner-all")
             $(button).on('click', { name: name }, function (event) {
+            	user.floor = ("#userFloor").val();
                 loadStation(name);
             })
             $("#start-overlay").append(button);

@@ -3,8 +3,9 @@ var user = {
     distanceStation: -1,
     laplength: 100,
     laptime: 300, //Average speed of a human jogging in m/s
-    height: 5,
+    floorHeight: 2.75,
     heightTime: 2,
+    floor: 0,
     updateTime: 5000,
     isMobile: true,
     debug: false
@@ -21,15 +22,14 @@ function init() {
 		$("#run").show();
 	} else {
 		displayStations();
-		if (user.isMobile) {
-		    if (window.localStorage.getItem("laptime") != null) {
-		        user.laptime = window.localStorage.getItem("laptime");
-		        alert("Laptime recovered");
-		    }
-		    //user.laptime = window.localStorage.getItem("laptime");
-		    //console.log("RecoveredLaptime: " + window.localStorage.getItem("laptime") );
-			/*user.heightTime = window.localStorage.getItem("heighTime");*/
-		}
+	    if (window.localStorage.getItem("laptime") != null) {
+	        user.laptime = window.localStorage.getItem("laptime");
+	        alert("Laptime recovered");
+	    }
+	    if (window.localStorage.getItem("heightTime") != null) {
+	    	user.heightTime = windows.localStorage.getItem("heightTime");
+	    	alert("HeightTime recovered");
+	    }
 	}
 
 	var gpsControll = window.setInterval(function () {

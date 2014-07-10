@@ -15,6 +15,12 @@
 	<div data-role="page">
 		<div id="debug"></div>
 		<div id="start-overlay" class="overlay">
+			<div id="userHeight">
+				
+				Which floor are you on?
+				<input type="number" id="userFloor" />
+
+			</div>
 			<div id="addStationContainerStart">
 				<input type="text" id="newStationStart" placeholder="Search Station" />
 				<button id="addStationStart">Add Station</button>
@@ -24,15 +30,16 @@
 		<div id="run" class="overlay">
 			<span id="runHelp"></span>
 			<button id="startRun">Go!</button>
-			Distance to run <span id="distanceRan">0</span> meters<br>
+			Distance ran <span id="distanceRan">0</span> meters<br>
 			Your time <span id="timeRan">0</span> seconds
 		</div>
-		<!--<div id="height" class="overlay">
+		<div id="height" class="overlay">
 			<span id="heightHelp"></span>
 			<button id="startDescend">Go!</button>
-			Height to overcome <span id="heightToDescend">0</span> meters<br>
+			<button id="stopDescend">Stop!</button>
+			Please run one floor and press Stop!
 			Your time <span id="timeDescended">0</span> seconds
-		</div>-->
+		</div>
         <div id="settings" class="overlay">
             <div id="addStationContainerSettings">
                 Add new station<br>
@@ -40,7 +47,7 @@
                 <button id="addStationSettings">Add Station</button>
             </div>
             <button id="reconfRun">Get a new lap time</button>
-            <!--<button id="reconfHeight">Get a new stairs time</button>-->
+            <button id="reconfHeight">Get a new story time</button>
         </div>	
 		<div data-role="header" class="app">
             <button id="changeStation">Change Station</button>
@@ -49,6 +56,7 @@
 			    <button id="settingsButton">Menu</button>
                 <button id="settingsBack">Back</button>
                 <button id="runBackToMenu">Back</button>
+                <button id="heightBackToMenu">Back</button>
             </div>
 		</div>
 		<div id="content" data-role="content" class="app">

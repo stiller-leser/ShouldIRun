@@ -62,10 +62,6 @@ $(document).ready(function(){
 	    $("#settings").show();
 	    $(this).hide();
 	    $("#run").hide();
-		//If user started the app for the first time, show start overlay
-		/*if(!user.firstStart){
-			$("#height").show();
-		}*/
 	});
 
 	$("#reconfRun").on("click", function(e){
@@ -82,9 +78,6 @@ $(document).ready(function(){
 
 	/*Everything for climbing stairs*/
 
-	/*$("#heightHelp").html("Please descend " + user.height + " meters. Press Go! if you are ready");
-	$("#heightToDescend").html(user.height);
-
 	$("#height").on("click", function(e){
 	    $(this).hide();
 	    e.stopPropagation();
@@ -100,12 +93,35 @@ $(document).ready(function(){
 	$("#reconfHeight").on("click", function(e){
 		e.stopPropagation();
 		$("#settings").hide();
+		$("#settingsBack").hide();
+		$("#heightBackToMenu").show();
 		$("#height").show();
+	});
+
+	$("#heightBackToMenu").on("click", function(e){
+	    e.stopPropagation();
+	    $("#distanceRan").html("0");
+	    $("#timeRan").html("0");
+	    $("#settingsBack").show();
+	    $("#settings").show();
+	    $(this).hide();
+	    $("#height").hide();
 	});
 
 	$("#startDescend").on("click", function(e){
 		e.stopPropagation();
-		descend();
-	});*/
+		startDescend();
+		$(this).hide();
+		$("#stopDescend").show();
+	});
+
+	$("#stopDescend").on("click", function(e){
+		e.stopPropagation();
+		stopDescend();
+		$(this).hide();
+		$("#height").hide();
+		$("#start-overlay").show();
+		$("#addStationContainerStart").show();
+	});
 
 });
