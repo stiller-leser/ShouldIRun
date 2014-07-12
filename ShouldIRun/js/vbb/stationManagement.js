@@ -23,21 +23,49 @@ var addStation = function (newStation) {
 
 var displayStations = function(){
     var stations = JSON.parse(window.localStorage.getItem("savedStations"));
-    $("#start-overlay").html("");
-    if (stations) {
+    $("#start-overlay .stationButton").remove();
+    console.log(stations.length)
+    if (stations && stations.length > 0) {
         jQuery.each(stations, function (index, name) {
             var button = document.createElement('button');
             $(button).attr("value", name);
+            $(button).attr("class", "stationButton");
             $(button).html(name);
             $(button).addClass("ui-btn ui-shadow ui-corner-all")
             $(button).on('click', { name: name }, function (event) {
-            	user.floor = ("#userFloor").val();
+            	user.floor = $("#userFloor").val();
                 loadStation(name);
             })
             $("#start-overlay").append(button);
         });
     } else {
+        $("#userHeight").hide();
         $("#addStationContainerStart").show();
+    }
+}
+
+var deleteStations = function () {
+    var stations = JSON.parse(window.localStorage.getItem("savedStations"));
+    $("#delete .deleteButton").remove();
+    if (stations) {
+        jQuery.each(stations, function (index, name) {
+            var button = document.createElement('button');
+            $(button).attr("value", name);
+            $(button).attr("class", "deleteButton");
+            $(button).html(name);
+            $(button).addClass("ui-btn ui-shadow ui-corner-all")
+            $(button).on('click', { name: name }, function (event) {
+                var index = stations.indexOf(name);
+                console.log(stations)
+                if (index > -1) {
+                    stations.splice(index, 1);
+                    window.localStorage.setItem("savedStations", JSON.stringify(stations));
+                    alert("Station deleted");
+                    deleteStations();
+                }
+            })
+            $("#delete").append(button);
+        });
     }
 }
 

@@ -29,7 +29,17 @@ $(document).ready(function(){
 	    $("#content").html("");
 	    $("#settings").hide();
 	    $("#run").hide();
-	})
+	    $("#height").hide();
+	    $("#delete").hide();
+	    $("#changeStationBack").show();
+	    $(this).hide();
+	});
+
+	$("#changeStationBack").on("click", function () {
+	    $(this).hide();
+	    $("#start-overlay").hide();
+	    $("#changeStation").show();
+	});
 
 	/*Add new station on setting page*/
 	$("#newStationSettings").autocomplete({
@@ -100,8 +110,7 @@ $(document).ready(function(){
 
 	$("#heightBackToMenu").on("click", function(e){
 	    e.stopPropagation();
-	    $("#distanceRan").html("0");
-	    $("#timeRan").html("0");
+	    $("#timeDescended").html("0");
 	    $("#settingsBack").show();
 	    $("#settings").show();
 	    $(this).hide();
@@ -122,6 +131,25 @@ $(document).ready(function(){
 		$("#height").hide();
 		$("#start-overlay").show();
 		$("#addStationContainerStart").show();
+	});
+
+    /*Everything for delete*/
+
+	$("#deleteStation").on("click", function (e) {
+	    e.stopPropagation();
+	    $("#settings").hide();
+	    $("#settingsBack").hide();
+	    $("#deleteBackToMenu").show();
+	    $("#delete").show();
+        deleteStations();
+	});
+
+	$("#deleteBackToMenu").on("click", function (e) {
+	    e.stopPropagation();
+	    $("#settingsBack").show();
+	    $("#settings").show();
+	    $(this).hide();
+	    $("#delete").hide();
 	});
 
 });

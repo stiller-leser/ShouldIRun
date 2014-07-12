@@ -18,7 +18,7 @@
 			<div id="userHeight">
 				
 				Which floor are you on?
-				<input type="number" id="userFloor" />
+				<input type="number" id="userFloor" value="0" />
 
 			</div>
 			<div id="addStationContainerStart">
@@ -40,6 +40,9 @@
 			Please run one floor and press Stop!
 			Your time <span id="timeDescended">0</span> seconds
 		</div>
+        <div id="delete" class="overlay">
+            Tab on a station to delete it
+        </div>
         <div id="settings" class="overlay">
             <div id="addStationContainerSettings">
                 Add new station<br>
@@ -48,15 +51,18 @@
             </div>
             <button id="reconfRun">Get a new lap time</button>
             <button id="reconfHeight">Get a new story time</button>
+            <button id="deleteStation">Delete Station</button>
         </div>	
 		<div data-role="header" class="app">
             <button id="changeStation">Change Station</button>
+            <button id="changeStationBack">Back</button>
 			<p id="appName">Should I Run?</p>
             <div id="buttonNavigation">
 			    <button id="settingsButton">Menu</button>
                 <button id="settingsBack">Back</button>
                 <button id="runBackToMenu">Back</button>
                 <button id="heightBackToMenu">Back</button>
+                <button id="deleteBackToMenu">Back</button>
             </div>
 		</div>
 		<div id="content" data-role="content" class="app">

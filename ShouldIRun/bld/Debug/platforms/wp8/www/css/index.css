@@ -46,7 +46,7 @@ html,body,div[data-role ="page"]{
 }
 
 .ui-input-text{
-    width: 93% !important;
+    width: 100% !important;
 }
 
 li.ui-menu-item{
@@ -65,7 +65,7 @@ span.ui-helper-hidden-accessible{
 
 hr#hrOverlay{
     margin: 0;
-    width: 93%;
+    width: 100%;
 }
 
 button.ui-btn{
@@ -88,10 +88,14 @@ div[data-role="header"]{
     top: 0;
 }
 
-#changeStation{
+#changeStation, #changeStationBack{
     width: 20%;
     float: left;
     top: 14%;
+}
+
+#changeStationBack {
+    display: none;
 }
 
 #changeStation.ui-btn-left{
@@ -107,14 +111,15 @@ div[data-role="header"]{
 
 #buttonNavigation{
     width: 20%;
+    height: 100%;
     display: inline-block;
 }
 
-#settingsButton, #runBackToMenu, #settingsBack  {
+#settingsButton, #runBackToMenu, #settingsBack, #heightBackToMenu, #deleteBackToMenu  {
     width: 100%;
 }
 
-#runBackToMenu, #settingsBack{
+#runBackToMenu, #settingsBack, #stopDescend, #heightBackToMenu, #deleteBackToMenu{
     display: none;
 }
 
@@ -124,7 +129,7 @@ div[data-role="content"]{
     height: 100%;
 }
 
-#settings, #run{
+#settings, #run, #height, #delete{
     display: none;
     margin-top: 5%;
 }

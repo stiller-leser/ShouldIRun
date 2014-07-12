@@ -1,6 +1,7 @@
 var movement = {
     runInterval: 0,
-    heightInterval: 0
+    heightInterval: 0,
+    heightTime: 0
 };
 
 function run(caller) {
@@ -31,12 +32,11 @@ function run(caller) {
                     user.laptime = time;
                     window.localStorage.setItem("laptime", time);
                     //If the user started the app for the first time, force him to run, even if he closes the app and opens it again
-                    if (!user.firstStart) {
-                        window.localStorage.setItem("firstStart", true);
-                    }
                     //If user started the app for the first time, show start overlay
                     if (!user.firstStart) {
+                        window.localStorage.setItem("firstStart", true);
                         $("#run").hide();
+                        $("#height").show();
                     }
                 }
 
@@ -49,52 +49,19 @@ function run(caller) {
     }
 };
 
-function descend(){
-	var date = new Date();
-	var startTime = date.getTime();
+function startDescend(){
+	var startDate = new Date();
+    movement.heightTime = startDate.getTime();
 
-	//get the position of the user
-	var startAltitude = geoData.altitude;
+    movement.heightInterval = window.setInterval(function(){
+        var date = new Date();
+        $("#timeDescended").html((date.getTime() - movement.heightTime) / 1000);
+    }, 1000)
+}
 
-	var intervalTime = (Math.random() + 0.1) * 1000;
-
-	if(startAltitude != 0){
-		var time = 0;
-
-		if(!user.isMobile){
-			var desktop = window.setInterval(function(){
-				geoData.distanceDescended += 1;
-				$("#heightToDescend").html(user.height - geoData.distanceDescended);
-				console.log(geoData.distanceDescended);
-			}, intervalTime);
-		}
-
-		movement.heightInterval = window.setInterval(function(){
-		 	if(geoData.distanceDescended < user.height){
-		 		var date = new Date();
-		 		geoData.distanceDescended = startAltitude - geoData.altitude;
-				console.log(geoData.distanceDescended);
-				$("#heightToDescend").html(user.height - geoData.distanceDescended);
-				time = (date.getTime() - startTime) / 1000;
-				$("#timeDescended").html(time);
-			} else {
-				if(!user.isMobile){
-					clearInterval(desktop);
-				}
-				clearInterval(movement.heightInterval);
-				user.heightTime = time;
-				window.localStorage.setItem("heightTime", time);
-
-				if(!user.notFirstStart){
-					$("#height").hide();
-					$("#start-overlay").show();
-					$("#addStationContainerStart").show();
-				}
-			}
-
-		}, 1000);
-	} else {
-		alert("No GPS, please wait 10 seconds.");
-	}
-
+function stopDescend(){
+    var date = new Date();
+    user.heightTime = (date.getTime() - movement.heightTime) / 1000;
+    clearInterval(movement.heightInterval);
+    window.localStorage.setItem("heightTime", user.heightTime);
 }
