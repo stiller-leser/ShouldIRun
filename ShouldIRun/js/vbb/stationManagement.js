@@ -24,6 +24,7 @@ var addStation = function (newStation) {
 var displayStations = function(){
     var stations = JSON.parse(window.localStorage.getItem("savedStations"));
     $("#start-overlay .stationButton").remove();
+    $("#changeStationBack").hide();
     console.log(stations.length)
     if (stations && stations.length > 0) {
         jQuery.each(stations, function (index, name) {

@@ -45,7 +45,7 @@ function init() {
 	        }, 1000);
 	        clearInterval(gpsControll);
 	    }
-	});
+	}, 1000);
 
 	if (user.debug) {
 	    $("#debug").show();
@@ -58,7 +58,7 @@ function init() {
 	            string += "Distance Run: " + getDistanceFromLatLon(startLat, startLong, geoData.latitude, geoData.longitude) + "<br>";
 	            string += "Accuracy: " + geoData.accuracy;
 	            $("#debug").html(string);
-	        }, 5000);
-	    }, 15000);
+	        }, 2000);
+	    }, 5000);
 	}
 };

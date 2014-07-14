@@ -32,6 +32,7 @@ function getCon(hafasNr) {
 		$("#start-overlay").hide();
 		$(".app").show();
 		var xml = jqXhr;
+		console.log(xml)
 		//Process the answer of the server
 		var resC = $('STBJourney',xml);
 		var list = "<ul>";
