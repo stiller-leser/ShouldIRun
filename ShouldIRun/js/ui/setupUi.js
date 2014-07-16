@@ -88,7 +88,7 @@ $(document).ready(function(){
 
 	/*Everything for climbing stairs*/
 
-	$("#height").on("click", function(e){
+	/*$("#height").on("click", function(e){
 	    $(this).hide();
 	    e.stopPropagation();
 	    clearInterval(movement.heightInterval);
@@ -98,7 +98,7 @@ $(document).ready(function(){
 			$("#start-overlay").show();
 			$("#addStationContainerStart").show();
 		}
-	});
+	});*/
 
 	$("#reconfHeight").on("click", function(e){
 		e.stopPropagation();
@@ -129,8 +129,6 @@ $(document).ready(function(){
 		stopDescend();
 		$(this).hide();
 		$("#height").hide();
-		$("#start-overlay").show();
-		$("#addStationContainerStart").show();
 	});
 
     /*Everything for delete*/

@@ -64,4 +64,11 @@ function stopDescend(){
     user.heightTime = (date.getTime() - movement.heightTime) / 1000;
     clearInterval(movement.heightInterval);
     window.localStorage.setItem("heightTime", user.heightTime);
+    $("#heightToDescend").html("0");
+    $("#timeDescended").html("0");
+    $("#height").hide();
+    if (!user.firstStart) {
+        $("#start-overlay").show();
+        $("#addStationContainerStart").show();
+    }
 }
