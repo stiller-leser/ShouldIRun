@@ -25,8 +25,8 @@ var displayStations = function(){
     var stations = JSON.parse(window.localStorage.getItem("savedStations"));
     $("#start-overlay .stationButton").remove();
     
-    console.log(stations.length)
-    if (stations && stations.length > 0) {
+    console.log(stations)
+    if (stations != null) {
         jQuery.each(stations, function (index, name) {
             var button = document.createElement('button');
             $(button).attr("value", name);
@@ -42,7 +42,6 @@ var displayStations = function(){
             $("#start-overlay").append(button);
         });
     } else {
-        $("#userHeight").hide();
         $("#addStationContainerStart").show();
     }
 }

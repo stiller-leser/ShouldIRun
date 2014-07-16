@@ -26,7 +26,7 @@ function init() {
 	        user.laptime = window.localStorage.getItem("laptime");
 	    }
 	    if (window.localStorage.getItem("heightTime") != null) {
-	    	user.heightTime = windows.localStorage.getItem("heightTime");
+	    	user.heightTime = window.localStorage.getItem("heightTime");
 	    }
 	}
 
