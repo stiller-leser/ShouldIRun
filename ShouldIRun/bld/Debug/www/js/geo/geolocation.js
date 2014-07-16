@@ -12,7 +12,7 @@ var geoData = {
 //Unfortunately first call first after 10 seconds
 function getPosition() {
     window.setInterval(function () {
-        navigator.geolocation.getCurrentPosition(success, error, { maximumAge: 1000, timeout: 10000, enableHighAccuracy: true });
+        navigator.geolocation.getCurrentPosition(success, error, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
     }, 5000);
 }
 

@@ -24,11 +24,9 @@ function init() {
 		displayStations();
 	    if (window.localStorage.getItem("laptime") != null) {
 	        user.laptime = window.localStorage.getItem("laptime");
-	        alert("Laptime recovered");
 	    }
 	    if (window.localStorage.getItem("heightTime") != null) {
 	    	user.heightTime = windows.localStorage.getItem("heightTime");
-	    	alert("HeightTime recovered");
 	    }
 	}
 

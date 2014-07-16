@@ -24,6 +24,7 @@ var addStation = function (newStation) {
 var displayStations = function(){
     var stations = JSON.parse(window.localStorage.getItem("savedStations"));
     $("#start-overlay .stationButton").remove();
+    
     console.log(stations.length)
     if (stations && stations.length > 0) {
         jQuery.each(stations, function (index, name) {
@@ -33,7 +34,9 @@ var displayStations = function(){
             $(button).html(name);
             $(button).addClass("ui-btn ui-shadow ui-corner-all")
             $(button).on('click', { name: name }, function (event) {
-            	user.floor = $("#userFloor").val();
+                user.floor = $("#userFloor").val();
+                $("#changeStationBack").hide();
+                $("#changeStation").show();
                 loadStation(name);
             })
             $("#start-overlay").append(button);

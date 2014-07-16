@@ -11,7 +11,7 @@
     <access origin="*" />
     <preference name="SplashScreen" value="screen" />
     <preference name="Orientation" value="portrait" />
-    <preference name="Fullscreen" value="true" />
+    <preference name="Fullscreen" value="false" />
     <vs:features>
         <vs:feature>org.apache.cordova.geolocation@0.3.7</vs:feature>
     </vs:features>
