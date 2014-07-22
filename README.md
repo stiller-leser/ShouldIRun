@@ -2,7 +2,7 @@ ShouldIRun
 ==========
 
 This is an app, that tells the user when the next public transport connection comes and if it is possible for him to get to the public transport stop in time. 
-SIR incorporates personalized run- and climg-times in the calculation of the route from the users position to the transport stop.
+SIR incorporates personalized run- and climbing-times in the calculation of the route from the users position to the transport stop.
 Please see Report.pdf in repository for further documentation.
 
 License
